@@ -1,6 +1,7 @@
 //=========================
 // main.scss
-// Regroupe tous les appels
+// Import des fichiers sass
+// Règles CSS spécifiques
 //=========================
 
 
@@ -11,6 +12,6 @@
 
 @import'variables';
 @import'typo';
-@import'normalize';
 @import'layout';
 @import'global';
+@import'pure-min-0.5.0';
