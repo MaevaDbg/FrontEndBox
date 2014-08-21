@@ -17,8 +17,7 @@
     <title></title>
 
     <link rel="stylesheet" href="css/main.css">
-
-    <script src="js/modernizr-2.6.2-respond-1.1.0.min.js"></script>
+    <link rel="stylesheet" href="js/libs/fancybox/source/jquery.fancybox.css" type="text/css" media="screen" />
 
 </head>
 <body>
@@ -36,6 +35,7 @@
 <!-- MAIN -->
     <div id="main" role="main">
         <p>Content</p>
+        <a href="http://lorempixel.com/output/cats-q-c-640-480-5.jpg" class="fancybox" title="Sample title"><img src="http://lorempixel.com/output/cats-q-c-640-480-5.jpg" /></a>
     </div>
 <!-- END MAIN -->
 
@@ -46,7 +46,13 @@
 <!-- END FOOTER -->
 
 <!-- javascript and plugins -->
-    <script src=""></script>
+    <script src="js/libs/jquery/dist/jquery.min.js"></script>
+    <script src="js/libs/fancybox/source/jquery.fancybox.pack.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('.fancybox').fancybox();
+        });
+    </script>
 <!-- end javascript and plugins -->
 
 </body>
