@@ -13,7 +13,8 @@ module.exports = function(grunt) {
   var jsSrc = [
     '../js/libs/jquery/dist/jquery.min.js', 
     '../js/libs/fancybox/source/jquery.fancybox.pack.js',
-    '../js/libs/flexslider/jquery.flexslider.js'
+    '../js/libs/flexslider/jquery.flexslider.js',
+    '../js/libs/FitText.js/jquery.fittext.js'
   ]
   , jsDist = '../js/plugins.js'
 

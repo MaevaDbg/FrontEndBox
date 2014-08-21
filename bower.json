@@ -4,6 +4,7 @@
  "dependencies": {
    "jquery": "latest",
    "fancybox": "latest",
-   "flexslider": "latest"
+   "flexslider": "latest",
+   "FitText.js": "latest"
   }
 }

@@ -29,7 +29,7 @@
 
 <!-- HEADER -->
     <header>
-        <h1>Header</h1>
+        <h1 id="responsive_headline">Header</h1>
     </header>
 <!-- END HEADER -->
  
@@ -65,6 +65,7 @@
         $(document).ready(function() {
             $('.fancybox').fancybox();
             $('.flexslider').flexslider();
+            $("#responsive_headline").fitText();
         });
     </script>
 <!-- end javascript and plugins -->
