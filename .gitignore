@@ -1,2 +1,3 @@
 _integration/.sass-cache/*
+_integration/node_modules/*
 js/libs/*

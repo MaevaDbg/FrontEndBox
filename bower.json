@@ -3,6 +3,7 @@
  "version": "0.0.1",
  "dependencies": {
    "jquery": "latest",
-   "fancybox": "latest"
+   "fancybox": "latest",
+   "flexslider": "latest"
   }
 }
