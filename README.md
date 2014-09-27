@@ -21,18 +21,18 @@ FrontEndBox
 
 3. Lancer un `bower install` en ligne de commande pour installer les différentes librairies dans le dossier js/libs/
 
-4. Ensuite il faut modifier le fichier Gruntfile.js dans _integration pour pouvoir compiler les fichiers des différentes librairies que vous avez importées. 
+4. Ensuite il faut modifier le fichier Gruntfile.js dans le dossier _integration pour pouvoir compiler les fichiers des différentes librairies que vous avez importées. 
 
    Ajouter les chemins relatifs vers les fichiers javascript dans la variable jsSrc
 
-   `//Liste des fichiers js importés  
-
-   var jsSrc = [  
-
+   ```
+   //Liste des fichiers js importés
+   var jsSrc = [
    '../js/libs/jquery/dist/jquery.min.js',  
-
-   '../js/libs/fancybox/source/jquery.fancybox.pack.js'`
-5. Positionner la console dans le dossier _integration et lancer `npm install`
+   '../js/libs/fancybox/source/jquery.fancybox.pack.js'
+   ]
+   ```
+5. Lancer un `npm install` dans le dossier _integration
 
 6. Lancer `grunt`
 
