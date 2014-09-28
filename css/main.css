@@ -1,350 +1,647 @@
 /**
   * Projet | Philharmonie de Paris
   * version
-  */
-/*!
+*/
+/*
 Pure v0.5.0
 Copyright 2014 Yahoo! Inc. All rights reserved.
 Licensed under the BSD License.
 https://github.com/yui/pure/blob/master/LICENSE.md
-*/
-/*!
+
 normalize.css v1.1.3 | MIT License | git.io/normalize
 Copyright (c) Nicolas Gallagher and Jonathan Neal
 */
-/*! normalize.css v1.1.3 | MIT License | git.io/normalize */
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 19, ../_integration/sass/_pure-0.5.0.scss */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
   display: block;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-audio, canvas, video {
+/**
+ * Correct `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+ */
+/* line 38, ../_integration/sass/_pure-0.5.0.scss */
+audio,
+canvas,
+video {
   display: inline-block;
   *display: inline;
   *zoom: 1;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+/* line 51, ../_integration/sass/_pure-0.5.0.scss */
 audio:not([controls]) {
   display: none;
   height: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address styling not present in IE 7/8/9, Firefox 3, and Safari 4.
+ * Known issue: no IE 6 support.
+ */
+/* line 61, ../_integration/sass/_pure-0.5.0.scss */
 [hidden] {
   display: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Correct text resizing oddly in IE 6/7 when body `font-size` is set using
+ *    `em` units.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/* line 76, ../_integration/sass/_pure-0.5.0.scss */
 html {
   font-size: 100%;
+  /* 1 */
   -ms-text-size-adjust: 100%;
+  /* 2 */
   -webkit-text-size-adjust: 100%;
+  /* 2 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-html, button, input, select, textarea {
+/**
+ * Address `font-family` inconsistency between `textarea` and other form
+ * elements.
+ */
+/* line 87, ../_integration/sass/_pure-0.5.0.scss */
+html,
+button,
+input,
+select,
+textarea {
   font-family: sans-serif;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address margins handled incorrectly in IE 6/7.
+ */
+/* line 99, ../_integration/sass/_pure-0.5.0.scss */
 body {
   margin: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+/* line 111, ../_integration/sass/_pure-0.5.0.scss */
 a:focus {
   outline: thin dotted;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-a:active, a:hover {
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+/* line 119, ../_integration/sass/_pure-0.5.0.scss */
+a:active,
+a:hover {
   outline: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address font sizes and margins set differently in IE 6/7.
+ * Address font sizes within `section` and `article` in Firefox 4+, Safari 5,
+ * and Chrome.
+ */
+/* line 134, ../_integration/sass/_pure-0.5.0.scss */
 h1 {
   font-size: 2em;
-  margin: .67em 0;
+  margin: 0.67em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 139, ../_integration/sass/_pure-0.5.0.scss */
 h2 {
   font-size: 1.5em;
-  margin: .83em 0;
+  margin: 0.83em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 144, ../_integration/sass/_pure-0.5.0.scss */
 h3 {
   font-size: 1.17em;
   margin: 1em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 149, ../_integration/sass/_pure-0.5.0.scss */
 h4 {
   font-size: 1em;
   margin: 1.33em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 154, ../_integration/sass/_pure-0.5.0.scss */
 h5 {
-  font-size: .83em;
+  font-size: 0.83em;
   margin: 1.67em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 159, ../_integration/sass/_pure-0.5.0.scss */
 h6 {
-  font-size: .67em;
+  font-size: 0.67em;
   margin: 2.33em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address styling not present in IE 7/8/9, Safari 5, and Chrome.
+ */
+/* line 168, ../_integration/sass/_pure-0.5.0.scss */
 abbr[title] {
   border-bottom: 1px dotted;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-b, strong {
-  font-weight: 700;
+/**
+ * Address style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+ */
+/* line 176, ../_integration/sass/_pure-0.5.0.scss */
+b,
+strong {
+  font-weight: bold;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 181, ../_integration/sass/_pure-0.5.0.scss */
 blockquote {
   margin: 1em 40px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+/* line 189, ../_integration/sass/_pure-0.5.0.scss */
 dfn {
   font-style: italic;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address differences between Firefox and other browsers.
+ * Known issue: no IE 6/7 normalization.
+ */
+/* line 198, ../_integration/sass/_pure-0.5.0.scss */
 hr {
   -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address styling not present in IE 6/7/8/9.
+ */
+/* line 208, ../_integration/sass/_pure-0.5.0.scss */
 mark {
   background: #ff0;
   color: #000;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-p, pre {
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 217, ../_integration/sass/_pure-0.5.0.scss */
+p,
+pre {
   margin: 1em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-code, kbd, pre, samp {
-  font-family: monospace,serif;
-  _font-family: 'courier new',monospace;
+/**
+ * Correct font family set oddly in IE 6, Safari 4/5, and Chrome.
+ */
+/* line 226, ../_integration/sass/_pure-0.5.0.scss */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
   font-size: 1em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+/* line 239, ../_integration/sass/_pure-0.5.0.scss */
 pre {
   white-space: pre;
   white-space: pre-wrap;
   word-wrap: break-word;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address CSS quotes not supported in IE 6/7.
+ */
+/* line 249, ../_integration/sass/_pure-0.5.0.scss */
 q {
   quotes: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-q:before, q:after {
+/**
+ * Address `quotes` property not supported in Safari 4.
+ */
+/* line 257, ../_integration/sass/_pure-0.5.0.scss */
+q:before,
+q:after {
   content: '';
   content: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+/* line 267, ../_integration/sass/_pure-0.5.0.scss */
 small {
   font-size: 80%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-sub, sup {
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+/* line 275, ../_integration/sass/_pure-0.5.0.scss */
+sub,
+sup {
   font-size: 75%;
   line-height: 0;
   position: relative;
   vertical-align: baseline;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 283, ../_integration/sass/_pure-0.5.0.scss */
 sup {
-  top: -.5em;
+  top: -0.5em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 287, ../_integration/sass/_pure-0.5.0.scss */
 sub {
-  bottom: -.25em;
+  bottom: -0.25em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-dl, menu, ol, ul {
+/* ==========================================================================
+   Lists
+   ========================================================================== */
+/**
+ * Address margins set differently in IE 6/7.
+ */
+/* line 299, ../_integration/sass/_pure-0.5.0.scss */
+dl,
+menu,
+ol,
+ul {
   margin: 1em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 306, ../_integration/sass/_pure-0.5.0.scss */
 dd {
   margin: 0 0 0 40px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-menu, ol, ul {
+/**
+ * Address paddings set differently in IE 6/7.
+ */
+/* line 314, ../_integration/sass/_pure-0.5.0.scss */
+menu,
+ol,
+ul {
   padding: 0 0 0 40px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-nav ul, nav ol {
+/**
+ * Correct list images handled incorrectly in IE 7.
+ */
+/* line 324, ../_integration/sass/_pure-0.5.0.scss */
+nav ul,
+nav ol {
   list-style: none;
   list-style-image: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * 1. Remove border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+ * 2. Improve image quality when scaled in IE 7.
+ */
+/* line 339, ../_integration/sass/_pure-0.5.0.scss */
 img {
   border: 0;
+  /* 1 */
   -ms-interpolation-mode: bicubic;
+  /* 2 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+/* line 348, ../_integration/sass/_pure-0.5.0.scss */
 svg:not(:root) {
   overflow: hidden;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+ */
+/* line 360, ../_integration/sass/_pure-0.5.0.scss */
 figure {
   margin: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Correct margin displayed oddly in IE 6/7.
+ */
+/* line 372, ../_integration/sass/_pure-0.5.0.scss */
 form {
   margin: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Define consistent border, margin, and padding.
+ */
+/* line 380, ../_integration/sass/_pure-0.5.0.scss */
 fieldset {
-  border: 1px solid silver;
+  border: 1px solid #c0c0c0;
   margin: 0 2px;
-  padding: .35em .625em .75em;
+  padding: 0.35em 0.625em 0.75em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * 1. Correct color not being inherited in IE 6/7/8/9.
+ * 2. Correct text not wrapping in Firefox 3.
+ * 3. Correct alignment displayed oddly in IE 6/7.
+ */
+/* line 392, ../_integration/sass/_pure-0.5.0.scss */
 legend {
   border: 0;
+  /* 1 */
   padding: 0;
   white-space: normal;
+  /* 2 */
   *margin-left: -7px;
+  /* 3 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-button, input, select, textarea {
+/**
+ * 1. Correct font size not being inherited in all browsers.
+ * 2. Address margins set differently in IE 6/7, Firefox 3+, Safari 5,
+ *    and Chrome.
+ * 3. Improve appearance and consistency in all browsers.
+ */
+/* line 406, ../_integration/sass/_pure-0.5.0.scss */
+button,
+input,
+select,
+textarea {
   font-size: 100%;
+  /* 1 */
   margin: 0;
+  /* 2 */
   vertical-align: baseline;
+  /* 3 */
   *vertical-align: middle;
+  /* 3 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-button, input {
+/**
+ * Address Firefox 3+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+/* line 421, ../_integration/sass/_pure-0.5.0.scss */
+button,
+input {
   line-height: normal;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-button, select {
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 6+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+/* line 433, ../_integration/sass/_pure-0.5.0.scss */
+button,
+select {
   text-transform: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-button, html input[type=button], input[type=reset], input[type=submit] {
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ * 4. Remove inner spacing in IE 7 without affecting normal text inputs.
+ *    Known issue: inner spacing remains in IE 6.
+ */
+/* line 448, ../_integration/sass/_pure-0.5.0.scss */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
   -webkit-appearance: button;
+  /* 2 */
   cursor: pointer;
+  /* 3 */
   *overflow: visible;
+  /* 4 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-button[disabled], html input[disabled] {
+/**
+ * Re-set default cursor for disabled elements.
+ */
+/* line 461, ../_integration/sass/_pure-0.5.0.scss */
+button[disabled],
+html input[disabled] {
   cursor: default;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-input[type=checkbox], input[type=radio] {
+/**
+ * 1. Address box sizing set to content-box in IE 8/9.
+ * 2. Remove excess padding in IE 8/9.
+ * 3. Remove excess padding in IE 7.
+ *    Known issue: excess padding remains in IE 6.
+ */
+/* line 473, ../_integration/sass/_pure-0.5.0.scss */
+input[type="checkbox"],
+input[type="radio"] {
   box-sizing: border-box;
+  /* 1 */
   padding: 0;
+  /* 2 */
   *height: 13px;
+  /* 3 */
   *width: 13px;
+  /* 3 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-input[type=search] {
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+/* line 487, ../_integration/sass/_pure-0.5.0.scss */
+input[type="search"] {
   -webkit-appearance: textfield;
+  /* 1 */
   -moz-box-sizing: content-box;
   -webkit-box-sizing: content-box;
+  /* 2 */
   box-sizing: content-box;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-input[type=search]::-webkit-search-cancel-button, input[type=search]::-webkit-search-decoration {
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+/* line 499, ../_integration/sass/_pure-0.5.0.scss */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
   -webkit-appearance: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-button::-moz-focus-inner, input::-moz-focus-inner {
+/**
+ * Remove inner padding and border in Firefox 3+.
+ */
+/* line 508, ../_integration/sass/_pure-0.5.0.scss */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
   border: 0;
   padding: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * 1. Remove default vertical scrollbar in IE 6/7/8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+/* line 519, ../_integration/sass/_pure-0.5.0.scss */
 textarea {
   overflow: auto;
+  /* 1 */
   vertical-align: top;
+  /* 2 */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+/* line 532, ../_integration/sass/_pure-0.5.0.scss */
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*csslint important:false*/
+/* ==========================================================================
+   Pure Base Extras
+   ========================================================================== */
+/**
+ * Extra rules that Pure adds on top of Normalize.css
+ */
+/**
+ * Always hide an element when it has the `hidden` HTML attribute.
+ */
+/* line 551, ../_integration/sass/_pure-0.5.0.scss */
 [hidden] {
   display: none !important;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/**
+ * Add this class to an image to make it fit within it's fluid parent wrapper while maintaining
+ * aspect ratio.
+ */
+/* line 559, ../_integration/sass/_pure-0.5.0.scss */
 .pure-img {
   max-width: 100%;
   height: auto;
   display: block;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*csslint regex-selectors:false, known-properties:false, duplicate-properties:false*/
+/* line 567, ../_integration/sass/_pure-0.5.0.scss */
 .pure-g {
-  letter-spacing: -.31em;
+  letter-spacing: -0.31em;
+  /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
-  *word-spacing: -.43em;
+  /* reset IE < 8 */
+  *word-spacing: -0.43em;
+  /* IE < 8: collapse white-space between units */
   text-rendering: optimizespeed;
-  font-family: FreeSans,Arimo,"Droid Sans",Helvetica,Arial,sans-serif;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+    /*
+    Sets the font stack to fonts known to work properly with the above letter
+    and word spacings. See: https://github.com/yui/pure/issues/41/
+
+    The following font stack makes Pure Grids work on all known environments.
+
+    * FreeSans: Ships with many Linux distros, including Ubuntu
+
+    * Arimo: Ships with Chrome OS. Arimo has to be defined before Helvetica and
+      Arial to get picked up by the browser, even though neither is available
+      in Chrome OS.
+
+    * Droid Sans: Ships with all versions of Android.
+
+    * Helvetica, Arial, sans-serif: Common font stack on OS X and Windows.
+    */
+  font-family: FreeSans, Arimo, "Droid Sans", Helvetica, Arial, sans-serif;
+    /*
+    Use flexbox when possible to avoid `letter-spacing` side-effects.
+
+    NOTE: Firefox (as of 25) does not currently support flex-wrap, so the
+    `-moz-` prefix version is omitted.
+    */
   display: -webkit-flex;
   -webkit-flex-flow: row wrap;
+  /* IE10 uses display: flexbox */
   display: -ms-flexbox;
   -ms-flex-flow: row wrap;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.opera-only :-o-prefocus, .pure-g {
-  word-spacing: -.43em;
+/* Opera as of 12 on Windows needs word-spacing.
+   The ".opera-only" selector is used to prevent actual prefocus styling
+   and is not required in markup.
+*/
+/* line 610, ../_integration/sass/_pure-0.5.0.scss */
+.opera-only :-o-prefocus,
+.pure-g {
+  word-spacing: -0.43em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 615, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u {
   display: inline-block;
   *display: inline;
+  /* IE < 8: fake inline-block */
   zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
@@ -352,13 +649,62 @@ table {
   text-rendering: auto;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*
+Resets the font family back to the OS/browser's default sans-serif font,
+this the same font stack that Normalize.css sets for the `body`.
+*/
+/* line 629, ../_integration/sass/_pure-0.5.0.scss */
 .pure-g [class*="pure-u"] {
   font-family: sans-serif;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1, .pure-u-1-1, .pure-u-1-2, .pure-u-1-3, .pure-u-2-3, .pure-u-1-4, .pure-u-3-4, .pure-u-1-5, .pure-u-2-5, .pure-u-3-5, .pure-u-4-5, .pure-u-5-5, .pure-u-1-6, .pure-u-5-6, .pure-u-1-8, .pure-u-3-8, .pure-u-5-8, .pure-u-7-8, .pure-u-1-12, .pure-u-5-12, .pure-u-7-12, .pure-u-11-12, .pure-u-1-24, .pure-u-2-24, .pure-u-3-24, .pure-u-4-24, .pure-u-5-24, .pure-u-6-24, .pure-u-7-24, .pure-u-8-24, .pure-u-9-24, .pure-u-10-24, .pure-u-11-24, .pure-u-12-24, .pure-u-13-24, .pure-u-14-24, .pure-u-15-24, .pure-u-16-24, .pure-u-17-24, .pure-u-18-24, .pure-u-19-24, .pure-u-20-24, .pure-u-21-24, .pure-u-22-24, .pure-u-23-24, .pure-u-24-24 {
+/* line 633, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1,
+.pure-u-1-1,
+.pure-u-1-2,
+.pure-u-1-3,
+.pure-u-2-3,
+.pure-u-1-4,
+.pure-u-3-4,
+.pure-u-1-5,
+.pure-u-2-5,
+.pure-u-3-5,
+.pure-u-4-5,
+.pure-u-5-5,
+.pure-u-1-6,
+.pure-u-5-6,
+.pure-u-1-8,
+.pure-u-3-8,
+.pure-u-5-8,
+.pure-u-7-8,
+.pure-u-1-12,
+.pure-u-5-12,
+.pure-u-7-12,
+.pure-u-11-12,
+.pure-u-1-24,
+.pure-u-2-24,
+.pure-u-3-24,
+.pure-u-4-24,
+.pure-u-5-24,
+.pure-u-6-24,
+.pure-u-7-24,
+.pure-u-8-24,
+.pure-u-9-24,
+.pure-u-10-24,
+.pure-u-11-24,
+.pure-u-12-24,
+.pure-u-13-24,
+.pure-u-14-24,
+.pure-u-15-24,
+.pure-u-16-24,
+.pure-u-17-24,
+.pure-u-18-24,
+.pure-u-19-24,
+.pure-u-20-24,
+.pure-u-21-24,
+.pure-u-22-24,
+.pure-u-23-24,
+.pure-u-24-24 {
   display: inline-block;
   *display: inline;
   zoom: 1;
@@ -368,177 +714,197 @@ table {
   text-rendering: auto;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 688, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-1-24 {
   width: 4.1667%;
   *width: 4.1357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1-12, .pure-u-2-24 {
+/* line 693, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1-12,
+.pure-u-2-24 {
   width: 8.3333%;
   *width: 8.3023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1-8, .pure-u-3-24 {
-  width: 12.5%;
-  *width: 12.469%;
+/* line 699, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1-8,
+.pure-u-3-24 {
+  width: 12.5000%;
+  *width: 12.4690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1-6, .pure-u-4-24 {
+/* line 705, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1-6,
+.pure-u-4-24 {
   width: 16.6667%;
   *width: 16.6357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 711, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-1-5 {
   width: 20%;
-  *width: 19.969%;
+  *width: 19.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 716, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-5-24 {
   width: 20.8333%;
   *width: 20.8023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1-4, .pure-u-6-24 {
+/* line 721, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1-4,
+.pure-u-6-24 {
   width: 25%;
-  *width: 24.969%;
+  *width: 24.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 727, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-7-24 {
   width: 29.1667%;
   *width: 29.1357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1-3, .pure-u-8-24 {
+/* line 732, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1-3,
+.pure-u-8-24 {
   width: 33.3333%;
   *width: 33.3023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-3-8, .pure-u-9-24 {
-  width: 37.5%;
-  *width: 37.469%;
+/* line 738, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-3-8,
+.pure-u-9-24 {
+  width: 37.5000%;
+  *width: 37.4690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 744, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-2-5 {
   width: 40%;
-  *width: 39.969%;
+  *width: 39.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-5-12, .pure-u-10-24 {
+/* line 749, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-5-12,
+.pure-u-10-24 {
   width: 41.6667%;
   *width: 41.6357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 755, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-11-24 {
   width: 45.8333%;
   *width: 45.8023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1-2, .pure-u-12-24 {
+/* line 760, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1-2,
+.pure-u-12-24 {
   width: 50%;
-  *width: 49.969%;
+  *width: 49.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 766, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-13-24 {
   width: 54.1667%;
   *width: 54.1357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-7-12, .pure-u-14-24 {
+/* line 771, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-7-12,
+.pure-u-14-24 {
   width: 58.3333%;
   *width: 58.3023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 777, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-3-5 {
   width: 60%;
-  *width: 59.969%;
+  *width: 59.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-5-8, .pure-u-15-24 {
-  width: 62.5%;
-  *width: 62.469%;
+/* line 782, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-5-8,
+.pure-u-15-24 {
+  width: 62.5000%;
+  *width: 62.4690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-2-3, .pure-u-16-24 {
+/* line 788, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-2-3,
+.pure-u-16-24 {
   width: 66.6667%;
   *width: 66.6357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 794, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-17-24 {
   width: 70.8333%;
   *width: 70.8023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-3-4, .pure-u-18-24 {
+/* line 799, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-3-4,
+.pure-u-18-24 {
   width: 75%;
-  *width: 74.969%;
+  *width: 74.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 805, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-19-24 {
   width: 79.1667%;
   *width: 79.1357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 810, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-4-5 {
   width: 80%;
-  *width: 79.969%;
+  *width: 79.9690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-5-6, .pure-u-20-24 {
+/* line 815, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-5-6,
+.pure-u-20-24 {
   width: 83.3333%;
   *width: 83.3023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-7-8, .pure-u-21-24 {
-  width: 87.5%;
-  *width: 87.469%;
+/* line 821, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-7-8,
+.pure-u-21-24 {
+  width: 87.5000%;
+  *width: 87.4690%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-11-12, .pure-u-22-24 {
+/* line 827, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-11-12,
+.pure-u-22-24 {
   width: 91.6667%;
   *width: 91.6357%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 833, ../_integration/sass/_pure-0.5.0.scss */
 .pure-u-23-24 {
   width: 95.8333%;
   *width: 95.8023%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-u-1, .pure-u-1-1, .pure-u-5-5, .pure-u-24-24 {
+/* line 838, ../_integration/sass/_pure-0.5.0.scss */
+.pure-u-1,
+.pure-u-1-1,
+.pure-u-5-5,
+.pure-u-24-24 {
   width: 100%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 844, ../_integration/sass/_pure-0.5.0.scss */
 .pure-button {
+  /* Structure */
   display: inline-block;
   *display: inline;
+  /*IE 6/7*/
   zoom: 1;
   line-height: normal;
   white-space: nowrap;
@@ -552,82 +918,117 @@ table {
   user-select: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Firefox: Get rid of the inner focus border */
+/* line 862, ../_integration/sass/_pure-0.5.0.scss */
 .pure-button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*csslint outline-none:false*/
+/* line 869, ../_integration/sass/_pure-0.5.0.scss */
 .pure-button {
   font-family: inherit;
   font-size: 100%;
   *font-size: 90%;
+  /*IE 6/7 - To reduce IE's oversized button text*/
   *overflow: visible;
-  padding: .5em 1em;
+  /*IE 6/7 - Because of IE's overly large left/right padding on buttons */
+  padding: 0.5em 1em;
   color: #444;
+  /* rgba not supported (IE 8) */
   color: rgba(0, 0, 0, 0.8);
+  /* rgba supported */
   *color: #444;
+  /* IE 6 & 7 */
   border: 1px solid #999;
-  border: 0 transparent;
+  /*IE 6/7/8*/
+  border: none transparent;
+  /*IE9 + everything else*/
   background-color: #E6E6E6;
   text-decoration: none;
   border-radius: 2px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-button-hover, .pure-button:hover, .pure-button:focus {
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000', GradientType=0);
+/* line 885, ../_integration/sass/_pure-0.5.0.scss */
+.pure-button-hover,
+.pure-button:hover,
+.pure-button:focus {
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#1a000000',GradientType=0);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(transparent), color-stop(40%, rgba(0, 0, 0, 0.05)), to(rgba(0, 0, 0, 0.1)));
   background-image: -webkit-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
-  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0, rgba(0, 0, 0, 0.1));
+  background-image: -moz-linear-gradient(top, rgba(0, 0, 0, 0.05) 0%, rgba(0, 0, 0, 0.1));
   background-image: -o-linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
   background-image: linear-gradient(transparent, rgba(0, 0, 0, 0.05) 40%, rgba(0, 0, 0, 0.1));
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 895, ../_integration/sass/_pure-0.5.0.scss */
 .pure-button:focus {
   outline: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-button-active, .pure-button:active {
+/* line 898, ../_integration/sass/_pure-0.5.0.scss */
+.pure-button-active,
+.pure-button:active {
   box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.15) inset, 0 0 6px rgba(0, 0, 0, 0.2) inset;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-button[disabled], .pure-button-disabled, .pure-button-disabled:hover, .pure-button-disabled:focus, .pure-button-disabled:active {
-  border: 0;
+/* line 903, ../_integration/sass/_pure-0.5.0.scss */
+.pure-button[disabled],
+.pure-button-disabled,
+.pure-button-disabled:hover,
+.pure-button-disabled:focus,
+.pure-button-disabled:active {
+  border: none;
   background-image: none;
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
   filter: alpha(opacity=40);
-  -khtml-opacity: .4;
-  -moz-opacity: .4;
-  opacity: .4;
+  -khtml-opacity: 0.40;
+  -moz-opacity: 0.40;
+  opacity: 0.40;
   cursor: not-allowed;
   box-shadow: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 919, ../_integration/sass/_pure-0.5.0.scss */
 .pure-button-hidden {
   display: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Firefox: Get rid of the inner focus border */
+/* line 924, ../_integration/sass/_pure-0.5.0.scss */
 .pure-button::-moz-focus-inner {
   padding: 0;
   border: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-button-primary, .pure-button-selected, a.pure-button-primary, a.pure-button-selected {
+/* line 929, ../_integration/sass/_pure-0.5.0.scss */
+.pure-button-primary,
+.pure-button-selected,
+a.pure-button-primary,
+a.pure-button-selected {
   background-color: #0078e7;
   color: #fff;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form select, .pure-form textarea {
-  padding: .5em .6em;
+/* line 937, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[type="text"],
+.pure-form input[type="password"],
+.pure-form input[type="email"],
+.pure-form input[type="url"],
+.pure-form input[type="date"],
+.pure-form input[type="month"],
+.pure-form input[type="time"],
+.pure-form input[type="datetime"],
+.pure-form input[type="datetime-local"],
+.pure-form input[type="week"],
+.pure-form input[type="number"],
+.pure-form input[type="search"],
+.pure-form input[type="tel"],
+.pure-form input[type="color"],
+.pure-form select,
+.pure-form textarea {
+  padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 3px #ddd;
@@ -637,9 +1038,13 @@ table {
   box-sizing: border-box;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+/* line 967, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form input:not([type]) {
-  padding: .5em .6em;
+  padding: 0.5em 0.6em;
   display: inline-block;
   border: 1px solid #ccc;
   box-shadow: inset 0 1px 3px #ddd;
@@ -649,138 +1054,218 @@ table {
   box-sizing: border-box;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[type=color] {
-  padding: .2em .5em;
+/* Chrome (as of v.32/34 on OS X) needs additional room for color to display. */
+/* May be able to remove this tweak as color inputs become more standardized across browsers. */
+/* line 981, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[type="color"] {
+  padding: 0.2em 0.5em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[type=text]:focus, .pure-form input[type=password]:focus, .pure-form input[type=email]:focus, .pure-form input[type=url]:focus, .pure-form input[type=date]:focus, .pure-form input[type=month]:focus, .pure-form input[type=time]:focus, .pure-form input[type=datetime]:focus, .pure-form input[type=datetime-local]:focus, .pure-form input[type=week]:focus, .pure-form input[type=number]:focus, .pure-form input[type=search]:focus, .pure-form input[type=tel]:focus, .pure-form input[type=color]:focus, .pure-form select:focus, .pure-form textarea:focus {
+/* line 986, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[type="text"]:focus,
+.pure-form input[type="password"]:focus,
+.pure-form input[type="email"]:focus,
+.pure-form input[type="url"]:focus,
+.pure-form input[type="date"]:focus,
+.pure-form input[type="month"]:focus,
+.pure-form input[type="time"]:focus,
+.pure-form input[type="datetime"]:focus,
+.pure-form input[type="datetime-local"]:focus,
+.pure-form input[type="week"]:focus,
+.pure-form input[type="number"]:focus,
+.pure-form input[type="search"]:focus,
+.pure-form input[type="tel"]:focus,
+.pure-form input[type="color"]:focus,
+.pure-form select:focus,
+.pure-form textarea:focus {
   outline: 0;
   outline: thin dotted \9;
+  /* IE6-9 */
   border-color: #129FEA;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+/* line 1011, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form input:not([type]):focus {
   outline: 0;
   outline: thin dotted \9;
+  /* IE6-9 */
   border-color: #129FEA;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[type=file]:focus, .pure-form input[type=radio]:focus, .pure-form input[type=checkbox]:focus {
+/* line 1017, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[type="file"]:focus,
+.pure-form input[type="radio"]:focus,
+.pure-form input[type="checkbox"]:focus {
   outline: thin dotted #333;
   outline: 1px auto #129FEA;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form .pure-checkbox, .pure-form .pure-radio {
-  margin: .5em 0;
+/* line 1023, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form .pure-checkbox,
+.pure-form .pure-radio {
+  margin: 0.5em 0;
   display: block;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[type=text][disabled], .pure-form input[type=password][disabled], .pure-form input[type=email][disabled], .pure-form input[type=url][disabled], .pure-form input[type=date][disabled], .pure-form input[type=month][disabled], .pure-form input[type=time][disabled], .pure-form input[type=datetime][disabled], .pure-form input[type=datetime-local][disabled], .pure-form input[type=week][disabled], .pure-form input[type=number][disabled], .pure-form input[type=search][disabled], .pure-form input[type=tel][disabled], .pure-form input[type=color][disabled], .pure-form select[disabled], .pure-form textarea[disabled] {
+/* line 1029, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[type="text"][disabled],
+.pure-form input[type="password"][disabled],
+.pure-form input[type="email"][disabled],
+.pure-form input[type="url"][disabled],
+.pure-form input[type="date"][disabled],
+.pure-form input[type="month"][disabled],
+.pure-form input[type="time"][disabled],
+.pure-form input[type="datetime"][disabled],
+.pure-form input[type="datetime-local"][disabled],
+.pure-form input[type="week"][disabled],
+.pure-form input[type="number"][disabled],
+.pure-form input[type="search"][disabled],
+.pure-form input[type="tel"][disabled],
+.pure-form input[type="color"][disabled],
+.pure-form select[disabled],
+.pure-form textarea[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+/* line 1054, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form input:not([type])[disabled] {
   cursor: not-allowed;
   background-color: #eaeded;
   color: #cad2d3;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[readonly], .pure-form select[readonly], .pure-form textarea[readonly] {
+/* line 1059, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[readonly],
+.pure-form select[readonly],
+.pure-form textarea[readonly] {
   background: #eee;
+  /* menu hover bg color */
   color: #777;
+  /* menu text color */
   border-color: #ccc;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input:focus:invalid, .pure-form textarea:focus:invalid, .pure-form select:focus:invalid {
+/* line 1067, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input:focus:invalid,
+.pure-form textarea:focus:invalid,
+.pure-form select:focus:invalid {
   color: #b94a48;
   border-color: #ee5f5b;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input:focus:invalid:focus, .pure-form textarea:focus:invalid:focus, .pure-form select:focus:invalid:focus {
+/* line 1073, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input:focus:invalid:focus,
+.pure-form textarea:focus:invalid:focus,
+.pure-form select:focus:invalid:focus {
   border-color: #e9322d;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input[type=file]:focus:invalid:focus, .pure-form input[type=radio]:focus:invalid:focus, .pure-form input[type=checkbox]:focus:invalid:focus {
+/* line 1078, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input[type="file"]:focus:invalid:focus,
+.pure-form input[type="radio"]:focus:invalid:focus,
+.pure-form input[type="checkbox"]:focus:invalid:focus {
   outline-color: #e9322d;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1083, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form select {
   border: 1px solid #ccc;
-  background-color: #fff;
+  background-color: white;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1087, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form select[multiple] {
   height: auto;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1090, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form label {
-  margin: .5em 0 .2em;
+  margin: 0.5em 0 0.2em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1093, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form fieldset {
   margin: 0;
-  padding: .35em 0 .75em;
+  padding: 0.35em 0 0.75em;
   border: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1098, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form legend {
   display: block;
   width: 100%;
-  padding: .3em 0;
-  margin-bottom: .3em;
+  padding: 0.3em 0;
+  margin-bottom: 0.3em;
   color: #333;
   border-bottom: 1px solid #e5e5e5;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form-stacked input[type=text], .pure-form-stacked input[type=password], .pure-form-stacked input[type=email], .pure-form-stacked input[type=url], .pure-form-stacked input[type=date], .pure-form-stacked input[type=month], .pure-form-stacked input[type=time], .pure-form-stacked input[type=datetime], .pure-form-stacked input[type=datetime-local], .pure-form-stacked input[type=week], .pure-form-stacked input[type=number], .pure-form-stacked input[type=search], .pure-form-stacked input[type=tel], .pure-form-stacked input[type=color], .pure-form-stacked select, .pure-form-stacked label, .pure-form-stacked textarea {
+/* line 1107, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form-stacked input[type="text"],
+.pure-form-stacked input[type="password"],
+.pure-form-stacked input[type="email"],
+.pure-form-stacked input[type="url"],
+.pure-form-stacked input[type="date"],
+.pure-form-stacked input[type="month"],
+.pure-form-stacked input[type="time"],
+.pure-form-stacked input[type="datetime"],
+.pure-form-stacked input[type="datetime-local"],
+.pure-form-stacked input[type="week"],
+.pure-form-stacked input[type="number"],
+.pure-form-stacked input[type="search"],
+.pure-form-stacked input[type="tel"],
+.pure-form-stacked input[type="color"],
+.pure-form-stacked select,
+.pure-form-stacked label,
+.pure-form-stacked textarea {
   display: block;
-  margin: .25em 0;
+  margin: 0.25em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*
+Need to separate out the :not() selector from the rest of the CSS 2.1 selectors
+since IE8 won't execute CSS that contains a CSS3 selector.
+*/
+/* line 1132, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form-stacked input:not([type]) {
   display: block;
-  margin: .25em 0;
+  margin: 0.25em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form-aligned input, .pure-form-aligned textarea, .pure-form-aligned select, .pure-form-aligned .pure-help-inline, .pure-form-message-inline {
+/* line 1136, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form-aligned input,
+.pure-form-aligned textarea,
+.pure-form-aligned select,
+.pure-form-aligned .pure-help-inline,
+.pure-form-message-inline {
   display: inline-block;
   *display: inline;
   *zoom: 1;
   vertical-align: middle;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1147, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form-aligned textarea {
   vertical-align: top;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Aligned Forms */
+/* line 1152, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form-aligned .pure-control-group {
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1155, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form-aligned .pure-control-group label {
   text-align: right;
   display: inline-block;
@@ -789,23 +1274,26 @@ table {
   margin: 0 1em 0 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1162, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form-aligned .pure-controls {
   margin: 1.5em 0 0 10em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form input.pure-input-rounded, .pure-form .pure-input-rounded {
+/* Rounded Inputs */
+/* line 1167, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form input.pure-input-rounded,
+.pure-form .pure-input-rounded {
   border-radius: 2em;
-  padding: .5em 1em;
+  padding: 0.5em 1em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Grouped Inputs */
+/* line 1174, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-group fieldset {
   margin-bottom: 10px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1177, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-group input {
   display: block;
   padding: 10px;
@@ -815,120 +1303,159 @@ table {
   top: -1px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1185, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-group input:focus {
   z-index: 2;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1188, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-group input:first-child {
   top: 1px;
   border-radius: 4px 4px 0 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1192, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-group input:last-child {
   top: -2px;
   border-radius: 0 0 4px 4px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1196, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-group button {
-  margin: .35em 0;
+  margin: 0.35em 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1200, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-input-1 {
   width: 100%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1203, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-input-2-3 {
   width: 66%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1206, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-input-1-2 {
   width: 50%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1209, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-input-1-3 {
   width: 33%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1212, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form .pure-input-1-4 {
   width: 25%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-form .pure-help-inline, .pure-form-message-inline {
+/* Inline help for forms */
+/* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+/* line 1218, ../_integration/sass/_pure-0.5.0.scss */
+.pure-form .pure-help-inline,
+.pure-form-message-inline {
   display: inline-block;
-  padding-left: .3em;
+  padding-left: 0.3em;
   color: #666;
   vertical-align: middle;
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Block help for forms */
+/* line 1228, ../_integration/sass/_pure-0.5.0.scss */
 .pure-form-message {
   display: block;
   color: #666;
-  font-size: .875em;
+  font-size: 0.875em;
 }
 
 @media only screen and (max-width: 480px) {
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-  .pure-form button[type=submit] {
-    margin: .7em 0 0;
+  /* line 1235, ../_integration/sass/_pure-0.5.0.scss */
+  .pure-form button[type="submit"] {
+    margin: 0.7em 0 0;
   }
 
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-  .pure-form input:not([type]), .pure-form input[type=text], .pure-form input[type=password], .pure-form input[type=email], .pure-form input[type=url], .pure-form input[type=date], .pure-form input[type=month], .pure-form input[type=time], .pure-form input[type=datetime], .pure-form input[type=datetime-local], .pure-form input[type=week], .pure-form input[type=number], .pure-form input[type=search], .pure-form input[type=tel], .pure-form input[type=color], .pure-form label {
-    margin-bottom: .3em;
+  /* line 1239, ../_integration/sass/_pure-0.5.0.scss */
+  .pure-form input:not([type]),
+  .pure-form input[type="text"],
+  .pure-form input[type="password"],
+  .pure-form input[type="email"],
+  .pure-form input[type="url"],
+  .pure-form input[type="date"],
+  .pure-form input[type="month"],
+  .pure-form input[type="time"],
+  .pure-form input[type="datetime"],
+  .pure-form input[type="datetime-local"],
+  .pure-form input[type="week"],
+  .pure-form input[type="number"],
+  .pure-form input[type="search"],
+  .pure-form input[type="tel"],
+  .pure-form input[type="color"],
+  .pure-form label {
+    margin-bottom: 0.3em;
     display: block;
   }
 
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-  .pure-group input:not([type]), .pure-group input[type=text], .pure-group input[type=password], .pure-group input[type=email], .pure-group input[type=url], .pure-group input[type=date], .pure-group input[type=month], .pure-group input[type=time], .pure-group input[type=datetime], .pure-group input[type=datetime-local], .pure-group input[type=week], .pure-group input[type=number], .pure-group input[type=search], .pure-group input[type=tel], .pure-group input[type=color] {
+  /* line 1259, ../_integration/sass/_pure-0.5.0.scss */
+  .pure-group input:not([type]),
+  .pure-group input[type="text"],
+  .pure-group input[type="password"],
+  .pure-group input[type="email"],
+  .pure-group input[type="url"],
+  .pure-group input[type="date"],
+  .pure-group input[type="month"],
+  .pure-group input[type="time"],
+  .pure-group input[type="datetime"],
+  .pure-group input[type="datetime-local"],
+  .pure-group input[type="week"],
+  .pure-group input[type="number"],
+  .pure-group input[type="search"],
+  .pure-group input[type="tel"],
+  .pure-group input[type="color"] {
     margin-bottom: 0;
   }
 
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+  /* line 1277, ../_integration/sass/_pure-0.5.0.scss */
   .pure-form-aligned .pure-control-group label {
-    margin-bottom: .3em;
+    margin-bottom: 0.3em;
     text-align: left;
     display: block;
     width: 100%;
   }
 
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+  /* line 1284, ../_integration/sass/_pure-0.5.0.scss */
   .pure-form-aligned .pure-controls {
-    margin: 1.5em 0 0;
+    margin: 1.5em 0 0 0;
   }
 
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-  .pure-form .pure-help-inline, .pure-form-message-inline, .pure-form-message {
+  /* NOTE: pure-help-inline is deprecated. Use .pure-form-message-inline instead. */
+  /* line 1289, ../_integration/sass/_pure-0.5.0.scss */
+  .pure-form .pure-help-inline,
+  .pure-form-message-inline,
+  .pure-form-message {
     display: block;
-    font-size: .75em;
-    padding: .2em 0 .8em;
+    font-size: 0.75em;
+    /* Increased bottom padding to make it group with its related input element. */
+    padding: 0.2em 0 0.8em;
   }
 }
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*csslint adjoining-classes:false, outline-none:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+/* line 1302, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu ul {
   position: absolute;
   visibility: hidden;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1307, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu.pure-menu-open {
   visibility: visible;
   z-index: 2;
   width: 100%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1313, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu ul {
   left: -10000px;
   list-style: none;
@@ -938,30 +1465,31 @@ table {
   z-index: 1;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1322, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu > ul {
   position: relative;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1324, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-open > ul {
   left: 0;
   top: 0;
   visibility: visible;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1330, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-open > ul:focus {
   outline: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1334, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu li {
   position: relative;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu a, .pure-menu .pure-menu-heading {
+/* line 1336, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu a,
+.pure-menu .pure-menu-heading {
   display: block;
   color: inherit;
   line-height: 1.5em;
@@ -970,7 +1498,7 @@ table {
   white-space: nowrap;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1346, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu.pure-menu-horizontal > .pure-menu-heading {
   display: inline-block;
   *display: inline;
@@ -979,7 +1507,7 @@ table {
   vertical-align: middle;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1353, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu.pure-menu-horizontal > ul {
   display: inline-block;
   *display: inline;
@@ -987,26 +1515,27 @@ table {
   vertical-align: middle;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1360, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu li a {
   padding: 5px 20px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1362, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-can-have-children > .pure-menu-label:after {
   content: '\25B8';
   float: right;
-  font-family: 'Lucida Grande','Lucida Sans Unicode','DejaVu Sans',sans-serif;
+  /* These specific fonts have the Unicode char we need. */
+  font-family: 'Lucida Grande', 'Lucida Sans Unicode', 'DejaVu Sans', sans-serif;
   margin-right: -20px;
   margin-top: -1px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1371, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-can-have-children > .pure-menu-label {
   padding-right: 30px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1375, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-separator {
   background-color: #dfdfdf;
   display: block;
@@ -1016,12 +1545,13 @@ table {
   overflow: hidden;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1384, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-hidden {
   display: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* FIXED MENU */
+/* line 1389, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-fixed {
   position: fixed;
   top: 0;
@@ -1029,7 +1559,9 @@ table {
   width: 100%;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* HORIZONTAL MENU CODE */
+/* Initial menus should be inline-block so that they are horizontal */
+/* line 1400, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-horizontal li {
   display: inline-block;
   *display: inline;
@@ -1037,133 +1569,166 @@ table {
   vertical-align: middle;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Submenus should still be display: block; */
+/* line 1408, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-horizontal li li {
   display: block;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Content after should be down arrow */
+/* line 1413, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label:after {
   content: "\25BE";
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*Add extra padding to elements that have the arrow so that the hover looks nice */
+/* line 1417, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-horizontal > .pure-menu-children > .pure-menu-can-have-children > .pure-menu-label {
   padding-right: 30px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Adjusting separator for vertical menus */
+/* line 1422, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-horizontal li.pure-menu-separator {
   height: 50%;
   width: 1px;
   margin: 0 7px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Submenus should be horizontal separator again */
+/* line 1429, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu-horizontal li li.pure-menu-separator {
   height: 1px;
   width: auto;
   margin: 7px 2px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu.pure-menu-open, .pure-menu.pure-menu-horizontal li .pure-menu-children {
+/*csslint adjoining-classes:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+/* MAIN MENU STYLING */
+/* line 1441, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu.pure-menu-open,
+.pure-menu.pure-menu-horizontal li .pure-menu-children {
   background: #fff;
+  /* Old browsers */
   border: 1px solid #b7b7b7;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu.pure-menu-horizontal, .pure-menu.pure-menu-horizontal .pure-menu-heading {
-  border: 0;
+/* remove borders for horizontal menus */
+/* line 1448, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu.pure-menu-horizontal,
+.pure-menu.pure-menu-horizontal .pure-menu-heading {
+  border: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* LINK STYLES */
+/* line 1456, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu a {
   border: 1px solid transparent;
-  border-left: 0;
-  border-right: 0;
+  border-left: none;
+  border-right: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu a, .pure-menu .pure-menu-can-have-children > li:after {
+/* line 1463, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu a,
+.pure-menu .pure-menu-can-have-children > li:after {
   color: #777;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1468, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu .pure-menu-can-have-children > li:hover:after {
   color: #fff;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* Focus style for a dropdown menu-item when the parent has been opened */
+/* line 1473, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu .pure-menu-open {
   background: #dedede;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu li a:hover, .pure-menu li a:focus {
+/* line 1478, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu li a:hover,
+.pure-menu li a:focus {
   background: #eee;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu li.pure-menu-disabled a:hover, .pure-menu li.pure-menu-disabled a:focus {
+/* DISABLED STATES */
+/* line 1484, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu li.pure-menu-disabled a:hover,
+.pure-menu li.pure-menu-disabled a:focus {
   background: #fff;
   color: #bfbfbf;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1490, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu .pure-menu-disabled > a {
   background-image: none;
   border-color: transparent;
   cursor: default;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-menu .pure-menu-disabled > a, .pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
+/* line 1496, ../_integration/sass/_pure-0.5.0.scss */
+.pure-menu .pure-menu-disabled > a,
+.pure-menu .pure-menu-can-have-children.pure-menu-disabled > a:after {
   color: #bfbfbf;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* HEADINGS */
+/* line 1502, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu .pure-menu-heading {
   color: #565d64;
   text-transform: uppercase;
   font-size: 90%;
-  margin-top: .5em;
+  margin-top: 0.5em;
   border-bottom-width: 1px;
   border-bottom-style: solid;
   border-bottom-color: #dfdfdf;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* ACTIVE MENU ITEM */
+/* line 1513, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu .pure-menu-selected a {
   color: #000;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* FIXED MENU */
+/* line 1518, ../_integration/sass/_pure-0.5.0.scss */
 .pure-menu.pure-menu-open.pure-menu-fixed {
-  border: 0;
+  border: none;
   border-bottom: 1px solid #b7b7b7;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*csslint box-model:false*/
+/*TODO: Remove this lint rule override after a refactor of this code.*/
+/* line 1527, ../_integration/sass/_pure-0.5.0.scss */
 .pure-paginator {
-  letter-spacing: -.31em;
+  /* `pure-g` Grid styles */
+  letter-spacing: -0.31em;
+  /* Webkit: collapse white-space between units */
   *letter-spacing: normal;
-  *word-spacing: -.43em;
+  /* reset IE < 8 */
+  *word-spacing: -0.43em;
+  /* IE < 8: collapse white-space between units */
   text-rendering: optimizespeed;
+  /* Webkit: fixes text-rendering: optimizeLegibility */
+  /* `pure-paginator` Specific styles */
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.opera-only :-o-prefocus, .pure-paginator {
-  word-spacing: -.43em;
+/* line 1540, ../_integration/sass/_pure-0.5.0.scss */
+.opera-only :-o-prefocus,
+.pure-paginator {
+  word-spacing: -0.43em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* `pure-u` Grid styles */
+/* line 1546, ../_integration/sass/_pure-0.5.0.scss */
 .pure-paginator li {
   display: inline-block;
   *display: inline;
+  /* IE < 8: fake inline-block */
   zoom: 1;
   letter-spacing: normal;
   word-spacing: normal;
@@ -1171,79 +1736,87 @@ table {
   text-rendering: auto;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1557, ../_integration/sass/_pure-0.5.0.scss */
 .pure-paginator .pure-button {
   border-radius: 0;
-  padding: .8em 1.4em;
+  padding: 0.8em 1.4em;
   vertical-align: top;
   height: 1.1em;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-paginator .pure-button:focus, .pure-paginator .pure-button:active {
+/* line 1563, ../_integration/sass/_pure-0.5.0.scss */
+.pure-paginator .pure-button:focus,
+.pure-paginator .pure-button:active {
   outline-style: none;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-paginator .prev, .pure-paginator .next {
+/* line 1567, ../_integration/sass/_pure-0.5.0.scss */
+.pure-paginator .prev,
+.pure-paginator .next {
   color: #C0C1C3;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.45);
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1572, ../_integration/sass/_pure-0.5.0.scss */
 .pure-paginator .prev {
   border-radius: 2px 0 0 2px;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1575, ../_integration/sass/_pure-0.5.0.scss */
 .pure-paginator .next {
   border-radius: 0 2px 2px 0;
 }
 
 @media (max-width: 480px) {
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+  /* line 1580, ../_integration/sass/_pure-0.5.0.scss */
   .pure-menu-horizontal {
     width: 100%;
   }
 
-  /* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+  /* line 1584, ../_integration/sass/_pure-0.5.0.scss */
   .pure-menu-children li {
     display: block;
-    border-bottom: 1px solid #000;
+    border-bottom: 1px solid black;
   }
 }
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1590, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table {
+  /* Remove spacing between table cells (from Normalize.css) */
   border-collapse: collapse;
   border-spacing: 0;
   empty-cells: show;
   border: 1px solid #cbcbcb;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1598, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table caption {
   color: #000;
-  font: italic 85%/1 arial,sans-serif;
+  font: italic 85%/1 arial, sans-serif;
   padding: 1em 0;
   text-align: center;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-table td, .pure-table th {
+/* line 1605, ../_integration/sass/_pure-0.5.0.scss */
+.pure-table td,
+.pure-table th {
   border-left: 1px solid #cbcbcb;
+  /*  inner column border */
   border-width: 0 0 0 1px;
   font-size: inherit;
   margin: 0;
   overflow: visible;
-  padding: .5em 1em;
+  /*to make ths where the title is really long work*/
+  padding: 0.5em 1em;
+  /* cell padding */
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-table td:first-child, .pure-table th:first-child {
+/* line 1614, ../_integration/sass/_pure-0.5.0.scss */
+.pure-table td:first-child,
+.pure-table th:first-child {
   border-left-width: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1619, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table thead {
   background: #e0e0e0;
   color: #000;
@@ -1251,38 +1824,48 @@ table {
   vertical-align: bottom;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/*
+striping:
+   even - #fff (white)
+   odd  - #f2f2f2 (light gray)
+*/
+/* line 1631, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table td {
   background-color: transparent;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1634, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table-odd td {
   background-color: #f2f2f2;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* nth-child selector for modern browsers */
+/* line 1639, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table-striped tr:nth-child(2n-1) td {
   background-color: #f2f2f2;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* BORDERED TABLES */
+/* line 1644, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table-bordered td {
   border-bottom: 1px solid #cbcbcb;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-table-bordered tbody > tr:last-child td, .pure-table-horizontal tbody > tr:last-child td {
+/* line 1647, ../_integration/sass/_pure-0.5.0.scss */
+.pure-table-bordered tbody > tr:last-child td,
+.pure-table-horizontal tbody > tr:last-child td {
   border-bottom-width: 0;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
-.pure-table-horizontal td, .pure-table-horizontal th {
-  border-width: 0 0 1px;
+/* HORIZONTAL BORDERED TABLES */
+/* line 1655, ../_integration/sass/_pure-0.5.0.scss */
+.pure-table-horizontal td,
+.pure-table-horizontal th {
+  border-width: 0 0 1px 0;
   border-bottom: 1px solid #cbcbcb;
 }
 
-/* line 11, ../_integration/sass/_pure-min-0.5.0.scss */
+/* line 1660, ../_integration/sass/_pure-0.5.0.scss */
 .pure-table-horizontal tbody > tr:last-child td {
   border-bottom-width: 0;
 }
