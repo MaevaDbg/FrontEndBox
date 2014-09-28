@@ -1,3 +1,7 @@
 _integration/.sass-cache/*
 _integration/node_modules/*
+_integration/npm-debug.log
+npm-debug.log
+js/plugins.js
+js/scripts.js
 js/libs/*
