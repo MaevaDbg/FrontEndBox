@@ -1,30 +1,31 @@
 module.exports = function(grunt) {
 
-  //Compass : Minification/Concaténation SASS
+  //Compile Sass to CSS using Compass
   grunt.loadNpmTasks('grunt-contrib-compass');
+
   //Concaténation des fichiers JS/CSS
   grunt.loadNpmTasks('grunt-contrib-concat');
+
   //Minification JS
   grunt.loadNpmTasks('grunt-contrib-uglify');
+    //Minification des fichiers css
+  grunt.loadNpmTasks('grunt-contrib-cssmin');
+
   //Surveille les changements de fichiers
   grunt.loadNpmTasks('grunt-contrib-watch');
-  //Minification des fichiers css
-  grunt.loadNpmTasks('grunt-contrib-cssmin');
+
 
   //Liste des fichiers js importés
   var jsSrc = [
-    'librairies/jquery/dist/jquery.min.js', 
-    'librairies/fancybox/source/jquery.fancybox.pack.js',
-    'librairies/flexslider/jquery.flexslider.js',
-    'librairies/FitText.js/jquery.fittext.js',
+    'librairies/jquery/dist/jquery.min.js',
+    'librairies/bootstrap/dist/js/bootstrap.min.js',
     'scripts/scripts.js',
   ]
-  , jsDist = '../js/plugins.js'
+  , jsDist = '../js/scripts.js'
 
   //Liste des fichiers css importés
   var cssSrc = [ 
-    'librairies/fancybox/source/jquery.fancybox.css',
-    'librairies/flexslider/flexslider.css'
+    'librairies/bootstrap/dist/css/bootstrap.css'
   ]
   , cssDist = '../css/plugins.css'
 
@@ -38,14 +39,20 @@ module.exports = function(grunt) {
     compass: {
       compile: {
         options: {
-          config: 'config.rb'
+          sassDir: 'sass',
+          cssDir: '../css',
+          imagesDir: '../img',
+          javascriptsDir: '../js',
+          fontsDir: '../css/fonts',
+          outputStyle: 'expanded',
+          httpPath: '../',
         }
       }
     },
     //Config de la concaténation des fichiers
     concat: {
       options: {
-        separator: ';',
+        separator: '/',
       },
       js: {
         src: jsSrc,
@@ -58,20 +65,14 @@ module.exports = function(grunt) {
     },
     //Config de la minification JS
     uglify: {
-      options: {
-        separator: ';'
-      },
       compile: {
-        src: '../js/plugins.js',
-        dest: '../js/plugins-min.js'
+        src: '../js/scripts.js',
+        dest: '../js/scripts-min.js'
       }
     },
     //Config minification CSS
     cssmin: {
-      options: {
-        banner: '/* My minified css file */'
-      },
-      compile: {
+      minify: {
         files: {
           '../css/styles-min.css': ['../css/main.css', '../css/plugins.css']
         }
@@ -91,15 +92,14 @@ module.exports = function(grunt) {
       },
       css: {
         files: cssSrc,
-        tasks: ['concat:css']
+        tasks: ['concat:css', 'cssmin:minify']
       }
     }
 
   });
 
   // Les tâches sont enregistrées ici
-  grunt.registerTask('default', ['dev', 'watch'])
-  grunt.registerTask('dev', ['concat:js','concat:css','compass:compile']);
-  grunt.registerTask('prod', ['dev','uglify:compile','cssmin:compile']);
+  grunt.registerTask('default', ['prod', 'watch']);
+  grunt.registerTask('prod', ['compass:compile','concat:js','concat:css','uglify:compile','cssmin:compile']);
 
 };
