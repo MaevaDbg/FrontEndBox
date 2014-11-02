@@ -1,3 +1,6 @@
-/**
-  * Ce fichier regroupe tous les scripts relatifs au site
-  */
+/*! Projet 02-11-2014 */
+$(document).ready(function(){
+	$("h1").click(function(){
+		alert("toto")
+	});
+});
