@@ -67,6 +67,7 @@ module.exports = function(grunt) {
     concat: {
       options: {
         separator: grunt.util.linefeed,
+        sourceMap: true
       },
       js: {
         src: jsSrc,
@@ -85,7 +86,10 @@ module.exports = function(grunt) {
     uglify: {
       options: {
         preserveComments: 'false',
-        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n'
+        banner: '/*! <%= pkg.name %> <%= grunt.template.today("dd-mm-yyyy") %> */\n',
+        sourceMap : true,
+        sourceMapIncludeSources : true,
+        sourceMapIn : 'librairies/jquery/dist/jquery.min.map'
       },
       compile: {
         files: {
@@ -128,9 +132,11 @@ module.exports = function(grunt) {
   /**
    * BUILD
    */
-  
-  // Les tâches sont enregistrées ici
+  // Par defaut la commande grunt compile les fichiers SASS, concatene les fichiers javascript 
+  // et CSS et regarde si ça bouge
   grunt.registerTask('default', ['compass:compile','concat:js','concat:css','watch']);
+  // La commande grunt prod compile les fichiers SASS, minifie les fichiers javascript et les concatene, 
+  // concatene les fichiers CSS et minifie le tout
   grunt.registerTask('prod', ['compass:compile','uglify:compile','concat:jsUglified','concat:css','cssmin:minify']);
 
 };
