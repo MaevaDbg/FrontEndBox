@@ -2,7 +2,126 @@
   * Projet | Philharmonie de Paris
   * version
 */
-/* line 18, ../main.scss */
-h1 {
-  color: red;
+/* line 8, ../_typo.scss */
+header h1 {
+  font-size: 120px;
+  text-transform: uppercase;
+  color: #ff5500;
+}
+/* line 13, ../_typo.scss */
+header h2 {
+  font-size: 40px;
+}
+/* line 16, ../_typo.scss */
+header p {
+  font-size: 26px;
+}
+
+/* line 23, ../_typo.scss */
+.nav-primary a, .nav-primary a:hover {
+  color: #000;
+}
+
+/* line 28, ../_typo.scss */
+footer {
+  color: #FFF;
+}
+
+/* line 6, ../_global.scss */
+.icon {
+  display: block;
+}
+
+/* line 11, ../_global.scss */
+.nav-primary ul {
+  display: inline-block;
+  background-color: rgba(219, 219, 219, 0.7);
+  padding: 0;
+  margin: 0 10px;
+  margin-top: 8px;
+}
+/* line 18, ../_global.scss */
+.nav-primary li {
+  display: inline-block;
+  list-style: none;
+  padding: 0px 15px;
+}
+/* line 22, ../_global.scss */
+.nav-primary li a {
+  text-decoration: none;
+}
+/* line 25, ../_global.scss */
+.nav-primary li:hover {
+  border-bottom: 1px solid #2d2d2c;
+}
+/* line 29, ../_global.scss */
+.nav-primary li.selected-menu {
+  border-bottom: 1px solid #ff5500;
+}
+
+/* line 34, ../_global.scss */
+footer {
+  background-color: #2d2d2c;
+}
+
+/* line 80, icons/*.png */
+.icons-sprite, .icons-apple-touch-icon-114x114, .icons-apple-touch-icon-72x72, .icons-apple-touch-icon, .icons-home {
+  background-image: url('../img/icons-sfabba042f7.png');
+  background-repeat: no-repeat;
+}
+
+/* line 84, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-apple-touch-icon-114x114 {
+  background-position: 0 0;
+  height: 114px;
+  width: 114px;
+}
+
+/* line 84, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-apple-touch-icon-72x72 {
+  background-position: 0 -114px;
+  height: 72px;
+  width: 72px;
+}
+
+/* line 84, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-apple-touch-icon {
+  background-position: 0 -186px;
+  height: 57px;
+  width: 57px;
+}
+
+/* line 84, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-home {
+  background-position: 0 -243px;
+  height: 28px;
+  width: 20px;
+}
+/* line 59, ../../../../../../Ruby193/lib/ruby/gems/1.9.1/gems/compass-core-1.0.1/stylesheets/compass/utilities/sprites/_base.scss */
+.icons-home:hover, .icons-home.home-hover {
+  background-position: 0 -271px;
+}
+
+/* line 23, ../main.scss */
+#home .content {
+  position: relative;
+  width: 100%;
+  height: 500px;
+}
+/* line 28, ../main.scss */
+#home .content::after {
+  content: "";
+  background: url("../img/trame_actu_desktop.png");
+  background-color: #ececec;
+  background-repeat: repeat-x;
+  background-position: 0 50px;
+  opacity: 0.2;
+  width: 100%;
+  height: 500px;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;
 }

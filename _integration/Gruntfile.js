@@ -59,7 +59,7 @@ module.exports = function(grunt) {
           javascriptsDir: '../js',
           fontsDir: '../css/fonts',
           outputStyle: 'expanded',
-          httpPath: '../',
+          httpPath: '.',
         }
       }
     },
@@ -122,7 +122,7 @@ module.exports = function(grunt) {
       },
       css: {
         files: cssSrc,
-        tasks: ['concat:css', 'cssmin:minify']
+        tasks: ['concat:css']
       }
     }
 
