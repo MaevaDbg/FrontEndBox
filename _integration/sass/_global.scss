@@ -2,35 +2,3 @@
 // _global.scss
 // Définition des éléments présents et répété sur tout le site (boutons, contenus etc.)
 //=========================
-
-.icon{
-    display: block;
-}
-
-.nav-primary{
-    ul{
-        display: inline-block;
-        background-color: rgba(219, 219, 219, 0.7);
-        padding: 0;
-        margin: 0 10px;
-        margin-top: 8px;
-    }
-    li{
-        display: inline-block;
-        list-style: none;
-        padding: 0px 15px;
-        a{
-            text-decoration: none;
-        }
-        &:hover{
-            border-bottom: 1px solid #2d2d2c;
-        }
-    }
-    li.selected-menu{
-        border-bottom: 1px solid $orangeColor;
-    }
-}
-
-footer{
-    background-color: $grisFonceColor;
-}

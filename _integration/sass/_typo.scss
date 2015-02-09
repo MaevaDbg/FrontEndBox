@@ -2,29 +2,3 @@
 // _typo.scss
 // Toutes les définitions liées aux éléments de typo (@font-face, éléments de base)
 //=========================
-
-header{
-
-	h1{
-		font-size: 120px;
-		text-transform: uppercase;
-		color: $orangeColor;
-	}
-	h2{
-		font-size: 40px;
-	}
-	p{
-		font-size: 26px;
-	}
-	
-}
-
-.nav-primary{
-	a, a:hover{
-		color: $textColor;
-	}
-}
-
-footer{
-	color: #FFF;
-}

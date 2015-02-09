@@ -1,8 +1,9 @@
 module.exports = function(grunt) {
 
-  /**
-   * DEPENDENT PLUGINS
-   */
+  /*=============================================
+  =            DEPENDENT PLUGINS                =
+  =============================================*/
+  
   //Compile Sass to CSS using Compass
   grunt.loadNpmTasks('grunt-contrib-compass');
 
@@ -17,16 +18,16 @@ module.exports = function(grunt) {
   //Surveille les changements de fichiers
   grunt.loadNpmTasks('grunt-contrib-watch');
 
-  /**
-   * CONFIGURATION
-   */
+  /*=====================================
+  =            CONFIGURATION            =
+  =====================================*/
   //Liste des fichiers js minifiés qui vont être concaténés
   var jsSrc = [
     'librairies/jquery/dist/jquery.min.js',
     'librairies/bootstrap/dist/js/bootstrap.min.js',
     'scripts/scripts.js',
   ]
-  , jsDist = '../js/scripts.js'
+  , jsDist = '../web/js/scripts.js'
 
   //Liste des fichiers js minifiés qui vont être concaténés
   var jsUglifiedSrc = [
@@ -34,14 +35,14 @@ module.exports = function(grunt) {
     'librairies/bootstrap/dist/js/bootstrap.min.js',
     'scripts/scripts.min.js',
   ]
-  , jsUglifiedDist = '../js/scripts.js'
+  , jsUglifiedDist = '../web/js/scripts.js'
 
   //Liste des fichiers css des librairies
   var cssSrc = [ 
     'librairies/bootstrap/dist/css/bootstrap.min.css',
-    'sass/css/main.css'
+    '../web/css/main.css'
   ]
-  , cssDist = '../css/styles.css'
+  , cssDist = '../web/css/styles.css'
 
 
   // Configuration de Grunt
@@ -49,17 +50,17 @@ module.exports = function(grunt) {
 
     pkg: grunt.file.readJSON('package.json'),
 
-    //Config Compass
+   //Config Compass
     compass: {
       compile: {
         options: {
           sassDir: 'sass',
-          cssDir: 'sass/css',
-          imagesDir: '../img',
-          javascriptsDir: '../js',
-          fontsDir: '../css/fonts',
+          cssDir: '../web/css',
+          imagesDir: '../web/img',
+          javascriptsDir: '../web/js',
+          fontsDir: '../web/css/fonts',
           outputStyle: 'expanded',
-          httpPath: '.',
+          relativeAssets: true
         }
       }
     },
@@ -104,7 +105,7 @@ module.exports = function(grunt) {
       },
       minify: {
         files: {
-          '../css/styles.css': ['../css/styles.css']
+          '../web/css/styles.css': ['../web/css/styles.css']
         }
       }
     },
@@ -129,9 +130,9 @@ module.exports = function(grunt) {
   });
 
 
-  /**
-   * BUILD
-   */
+  /*=============================
+  =            BUILD            =
+  =============================*/
   // Par defaut la commande grunt compile les fichiers SASS, concatene les fichiers javascript 
   // et CSS et regarde si ça bouge
   grunt.registerTask('default', ['compass:compile','concat:js','concat:css','watch']);
